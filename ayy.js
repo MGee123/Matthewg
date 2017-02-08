@@ -85,7 +85,7 @@ return person.name.charAt(0).toUpperCase() + person.name.slice(1);
 });
 
 //17.
-.filter(_.min(gillFamily, "age", function(personY) {
+_.filter(_.min(gillFamily, "age", function(personY) {
 return function(aIn) {
 return aIn.name.includes("a");
 }
