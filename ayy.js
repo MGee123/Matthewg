@@ -68,9 +68,8 @@ return aIn.name.includes("a");
 
 16.
 _.map(gillFamily, function(person) {
-return person.name.charAt(0).toUppercase() + capL.slice(1);
+return person.name.charAt(0).toUpperCase() + person.name.slice(1);
 });
-
 
 
 
