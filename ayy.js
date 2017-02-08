@@ -30,7 +30,7 @@ _.filter(gillFamily, function (person) {
   return person.age < 50;
 }).length
 8.
-.chain(gillFamily)
+_.chain(gillFamily)
   .filter(function (person) { return person.age < 50; })
   .map(function (person) { return person.name + ' Gill'; })
   .join(', ')
@@ -40,17 +40,53 @@ _.filter(gillFamily, function (person) {
 
 
 10.
-.chain(gillFamily)
-_.dropWhile(gillFamily, function(over) { return over.age > 26; })
-.map(function (over) { return over.name; })
-.value()
+_.map(gillFamily, function(over) {
+    return over.age > 26 ? _.omit(over, 'age') : over;
+});
 
 11.
+_.sortBy(gillFamily, "age");
 
 12.
+_.filter(gillFamily, function(dee) {
+return dee.name.charAt(0) === "d";
+}); 
+
+
 13.
+
+
 14.
-_.min(gillFamily, "age");
+_.min(gillFamily, "age"); 
+
 
 15.
+
+_.filter(gillFamily, function(aIn) {
+return aIn.name.includes("a");
+});
+
+16.
+_.map(gillFamily, function(person) {
+return person.name.charAt(0).toUppercase() + capL.slice(1);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
