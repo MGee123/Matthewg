@@ -44,3 +44,13 @@ _.filter(gillFamily, function (person) {
 _.dropWhile(gillFamily, function(over) { return over.age > 26; })
 .map(function (over) { return over.name; })
 .value()
+
+11.
+
+12.
+13.
+14.
+_.min(gillFamily, "age");
+
+15.
+
