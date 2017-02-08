@@ -19,7 +19,7 @@ return a + m.age/p.length;
 },0);
 
 5.
-.map(_.filter(gillFamily, function (person) { return person.age < 50; }),
+_.map(_.filter(gillFamily, function (person) { return person.age < 50; }),
   function (person) { return person.name; });
 
 6.
@@ -37,8 +37,18 @@ _.chain(gillFamily)
   .value()
 
 9.
-
-
+<table>
+<tr>
+<th>Name</th>
+<th>Age</th>
+</tr>
+<tr>
+<td> _.map(gillFamily, "name"); </td>
+</tr>
+<tr>
+<td> _.map(gillFamily, "age"); </td>>
+</tr>
+</table>
 10.
 _.map(gillFamily, function(over) {
     return over.age > 26 ? _.omit(over, 'age') : over;
@@ -54,7 +64,9 @@ return dee.name.charAt(0) === "d";
 
 
 13.
-
+_.groupBy(gillFamily, function(firstLetter) {
+return firstLetter.name.charAt(0) ; 
+});
 
 14.
 _.min(gillFamily, "age"); 
@@ -71,7 +83,12 @@ _.map(gillFamily, function(person) {
 return person.name.charAt(0).toUpperCase() + person.name.slice(1);
 });
 
-
+17.
+.filter(_.min(gillFamily, "age", function(personY) {
+return function(aIn) {
+return aIn.name.includes("a");
+}
+}));
 
 
 
