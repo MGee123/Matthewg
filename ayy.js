@@ -14,9 +14,7 @@ _.sumBy(gillFamily, function(o) { return o.age; });
 _.sumBy(gillFamily, "age");
 
 //4.
-_(gillFamily).filter("age").reduce(function(a,m,i,p) {
-return a + m.age/p.length;
-},0);
+_.meanBy(gillFamily, "age");
 
 //5.
 _.map(_.filter(gillFamily, function (person) { return person.age < 50; }),
@@ -37,18 +35,6 @@ _.chain(gillFamily)
   .value()
 
 //9.
-<table>
-<tr>
-<th>Name</th>
-<th>Age</th>
-</tr>
-<tr>
-<td> _.map(gillFamily, "name"); </td>
-</tr>
-<tr>
-<td> _.map(gillFamily, "age"); </td>>
-</tr>
-</table>
 
 //10.
 _.map(gillFamily, function(over) {
@@ -60,7 +46,7 @@ _.sortBy(gillFamily, "age");
 
 //12.
 _.filter(gillFamily, function(dee) {
-return dee.name.charAt(0) === "d";
+return dee.name.charAt(0) == "d";
 }); 
 
 
@@ -70,7 +56,7 @@ return firstLetter.name.charAt(0) ;
 });
 
 //14.
-_.min(gillFamily, "age"); 
+_.minBy(gillFamily, "age");
 
 
 //15.
@@ -85,7 +71,7 @@ return person.name.charAt(0).toUpperCase() + person.name.slice(1);
 });
 
 //17.
-_.filter(_.min(gillFamily, "age", function(personY) {
+_.filter(_.minBy(gillFamily, "age", function(personY) {
 return function(aIn) {
 return aIn.name.includes("a");
 }
