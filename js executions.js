@@ -24,6 +24,8 @@
 "hello"
 // => hello
 .substring(0, 3)
+// => 0 = "h"
+// => 3 = "l"
 // => "hell"
 "hell".length
 // => 4
@@ -34,9 +36,11 @@
 
 "hello"
 // => hello
-.substring(0, 3 - 1)
+.substring(0, 3 - 1).length + "world"
 // => "hello".subString(0, (3-1))
 // => "hello".substring(0, 2)
+// => 0 = "h"
+// => 2 = "l"
 "hel".length + "world"
 // => 3 + "world"
 3 + "world"
