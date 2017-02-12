@@ -23,9 +23,11 @@
 
 "hello"
 // => hello
-.substring(0, 3)
-// => 0 = "h"
-// => 3 = "l"
+0
+// => 0
+3
+// => 3
+"hello".substring(0, 3)
 // => "hell"
 "hell".length
 // => 4
@@ -36,13 +38,14 @@
 
 "hello"
 // => hello
-.substring(0, 3 - 1).length + "world"
-// => "hello".subString(0, (3-1))
-// => "hello".substring(0, 2)
-// => 0 = "h"
-// => 2 = "l"
-"hel".length + "world"
-// => 3 + "world"
+0
+// => 0
+(3-1)
+// => 2
+"hello".subString(0, 2)
+// => "hel"
+"hel".length 
+// => 3
 3 + "world"
 // => 3world
 
