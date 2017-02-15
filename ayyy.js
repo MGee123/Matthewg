@@ -38,8 +38,7 @@ _.chain(gillFamily)
   .value()
 
 //9. 
-console.log("<table>\n <head>\n <title>The Gill family</title>\n <tr>\n <td>Name</td>\n <td>Age</td>\n </tr>\n" + famRows + "</td>\n </tr>\n </table>")
-
+console.log("<table>\n <head>\n <title>The Gill family</title>\n <tr>\n <td>Name</td>\n <td>Age</td>\n </tr>\n" + famRows + "\n</table>")
 //10.
 _.map(gillFamily, function(over) {
     return over.age > 26 ? _.omit(over, 'age') : over;
