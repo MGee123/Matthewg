@@ -1,5 +1,8 @@
 var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, {name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}];
 
+
+var famRows = _.map(gillFamily, function(el) { return "<tr><td>" +  el.name + "</td><td>" + el.age + "</td></tr>" });
+
 //1.
 _.map(gillFamily, "name");
 
@@ -35,8 +38,7 @@ _.chain(gillFamily)
   .value()
 
 //9. 
-console.log("<table>\n <head>\n <title>The Gill family</title>\n <tr>\n <td>Name</td>\n <td>Age</td>\n </tr>\n <td> _.map(gillFamily, 'name') </td>\n <td> _.map(gillFamily, 'age') </td>\n </tr>\n </table>")
-
+console.log("<table>\n <head>\n <title>The Gill family</title>\n <tr>\n <td>Name</td>\n <td>Age</td>\n </tr>\n" + famRows + "</td>\n </tr>\n </table>")
 
 //10.
 _.map(gillFamily, function(over) {
